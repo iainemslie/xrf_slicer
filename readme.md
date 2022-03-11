@@ -13,3 +13,5 @@ The command line can be run from **slicer.py** and takes two arguments:
     --output: Output path to store /sli directory containing .tiff images
 
 The GUI can be run from **slicer_qt.py**. Simply select or enter the paths to input file and output directory and click *'Run Slicer'*.
+
+Created for Jarvis Stobbs (Plant Imaging Lead) - jarvis.stobbs@lightsource.ca
