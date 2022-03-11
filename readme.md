@@ -1,5 +1,5 @@
 ## XRF-Slicer
-XRF-Slicer converts excel data specified in the same format as **onion-control.xlsx** into *.tiff* image slices.
+XRF-Slicer converts X-ray fluorescent excel data specified in the same format as **onion-control.xlsx** into *.tiff* image slices.
 The first two columns in the excel data represent the x and y image coordinates.
 The third column represents the physical size of the images in the z-plane.
 The remaining columns each represent a single image in the z-plane and record pixel intensity for
