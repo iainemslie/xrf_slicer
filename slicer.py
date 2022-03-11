@@ -48,18 +48,22 @@ def run_slicer(infile_path, outdir_path):
     print(" - Image width: {}".format(image_width))
     print(" - Image height: {}".format(image_height))
 
+    # Create a 3D numpy array to store images - row-column-slice
     image = np.empty((image_height, image_width, num_slices))
 
+    # We iterate through excel rows and get x-y coordinates
     for row_index in range(num_rows):
         row_values = df.iloc[row_index]
         x_coord = int(row_values[0])
         y_coord = int(row_values[1])
+        # Save to 3D numpy array the corresponding values
         for z_index in range(num_slices):
             image[y_coord, x_coord, z_index] = row_values[z_index + number_xyz_cols]
 
     if not os.path.isdir(os.path.join(outdir_path, 'sli')):
         os.makedirs(os.path.join(outdir_path, 'sli'), mode=0o777)
 
+    # Write each z-slice as separate image
     for z_index in range(num_slices):
         imsave(os.path.join(outdir_path, 'sli',
                             'slice_{:03d}.tif'.format(z_index)), np.float16(image[:, :, z_index]))
