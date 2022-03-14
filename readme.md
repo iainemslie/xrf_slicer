@@ -12,29 +12,40 @@ The command line can be run from **slicer.py** and takes two arguments:
     --input: Input path to .xlsx, .xls or .ods file
     --output: Output path to store /sli directory containing .tiff images
 
-The GUI can be run from **slicer_qt.py**. Simply select or enter the paths to input file and output directory and click *'Run Slicer'*.
+The GUI can be run from **slicer_gui.py**. Simply select or enter the paths to input file and output directory and click *'Run Slicer'*.
 
 Created for Jarvis Stobbs (Plant Imaging Lead) - jarvis.stobbs@lightsource.ca
 
 ## Installation
 
 1. Make sure you have Python3 installed
-2. Install virtualenv using:
+2. Install virtualenv using either of:
 
-        pip install virtualenv or python -m pip install virtualenv
+        pip install virtualenv
+
+        python -m pip install virtualenv
 3. Create a new virtual environment somewhere in the filesystem:
 
         virtualenv my_venv
 4. Activate the environment:
+   1. Windows:
 
-        Windows: my_venv/Scripts/activate Linux: source my_venv/bin/activate
+           my_venv/Scripts/activate
+   2. Linux:
+
+           source my_venv/bin/activate
+
 5. Install the required modules:
 
         pip install -r requirements.txt
 6. Run the program:
+   1. Command Line (remember to add --input and --output argument paths):
 
-        python slicer.py or python slicer_qt.py
+           python slicer.py
+   2. Graphical interface
 
+           python slicer_gui.py
+   
 These links may be useful if you run into trouble:
 
 https://aaronstannard.com/how-to-setup-a-proper-python-environment-on-windows/
