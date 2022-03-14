@@ -30,7 +30,7 @@ Created for Jarvis Stobbs (Plant Imaging Lead) - jarvis.stobbs@lightsource.ca
         Windows: my_venv/Scripts/activate Linux: source my_venv/bin/activate
 5. Install the required modules:
 
-        pip install requirements.txt
+        pip install -r requirements.txt
 6. Run the program:
 
         python slicer.py or python slicer_qt.py
