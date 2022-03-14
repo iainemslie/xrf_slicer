@@ -15,3 +15,28 @@ The command line can be run from **slicer.py** and takes two arguments:
 The GUI can be run from **slicer_qt.py**. Simply select or enter the paths to input file and output directory and click *'Run Slicer'*.
 
 Created for Jarvis Stobbs (Plant Imaging Lead) - jarvis.stobbs@lightsource.ca
+
+## Installation
+
+1. Make sure you have Python3 installed
+2. Install virtualenv using:
+
+        pip install virtualenv or python3 -m pip install virtualenv
+3. Create a new virtual environment somewhere in the filesystem:
+
+        virtualenv my_venv
+4. Activate the environment:
+
+        Windows: my_venv/Scripts/activate Linux: source my_venv/bin/activate
+5. Install the required modules:
+
+        pip install requirements.txt
+6. Run the program:
+
+        python3 slicer.py or python3 slicer_qt.py
+
+These links may be useful if you run into trouble:
+
+https://aaronstannard.com/how-to-setup-a-proper-python-environment-on-windows/
+
+https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/
