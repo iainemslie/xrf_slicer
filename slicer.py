@@ -91,6 +91,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    run_slicer(args.input, args.output)
-
-
+    if args.input is None or args.output is None:
+        print("Please supply --input argument with an input file")
+        print("Please supply --output argument with an output directory")
+    else:
+        run_slicer(args.input, args.output)
