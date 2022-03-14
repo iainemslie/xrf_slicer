@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 import os
 import argparse
-from tifffile import imsave
+import tifffile
 
 
 def run_slicer(infile_path, outdir_path):
@@ -65,8 +65,8 @@ def run_slicer(infile_path, outdir_path):
 
     # Write each z-slice as separate image
     for z_index in range(num_slices):
-        imsave(os.path.join(outdir_path, 'sli',
-                            'slice_{:03d}.tif'.format(z_index)), np.float16(image[:, :, z_index]))
+        tifffile.imwrite(os.path.join(outdir_path, 'sli', 'slice_{:03d}.tif'.format(z_index)),
+                         image[:, :, z_index].astype('float32'), dtype='float32')
 
     finish_message()
 
