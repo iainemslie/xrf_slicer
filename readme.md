@@ -39,9 +39,9 @@ Created for Jarvis Stobbs (Plant Imaging Lead) - jarvis.stobbs@lightsource.ca
 
         pip install -r requirements.txt
 6. Run the program:
-   1. Command Line (remember to add --input and --output argument paths):
+   1. Command Line:
 
-           python slicer.py
+           python slicer.py --input path/to/infile.xls --output path/to/outdir
    2. Graphical interface
 
            python slicer_gui.py
