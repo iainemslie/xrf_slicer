@@ -21,7 +21,7 @@ Created for Jarvis Stobbs (Plant Imaging Lead) - jarvis.stobbs@lightsource.ca
 1. Make sure you have Python3 installed
 2. Install virtualenv using:
 
-        pip install virtualenv or python3 -m pip install virtualenv
+        pip install virtualenv or python -m pip install virtualenv
 3. Create a new virtual environment somewhere in the filesystem:
 
         virtualenv my_venv
@@ -33,7 +33,7 @@ Created for Jarvis Stobbs (Plant Imaging Lead) - jarvis.stobbs@lightsource.ca
         pip install requirements.txt
 6. Run the program:
 
-        python3 slicer.py or python3 slicer_qt.py
+        python slicer.py or python slicer_qt.py
 
 These links may be useful if you run into trouble:
 
