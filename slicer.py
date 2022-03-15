@@ -30,10 +30,10 @@ def run_slicer(infile_path, outdir_path):
     num_cols = len(df.columns)
 
     # We assume that input files always contain x,y,z coordinates but we ignore the z column
-    number_xyz_cols = 3
+    num_xyz_cols = 3
 
     # We find the number of columns not including the x,y,z coordinates
-    num_slices = num_cols - number_xyz_cols
+    num_slices = num_cols - num_xyz_cols
 
     print("Input file path: '{}'".format(infile_path))
     print("Output directory path: '{}'\n".format(outdir_path))
@@ -58,7 +58,7 @@ def run_slicer(infile_path, outdir_path):
         y_coord = int(row_values[1])
         # Save to 3D numpy array the corresponding values
         for z_index in range(num_slices):
-            image[y_coord, x_coord, z_index] = row_values[z_index + number_xyz_cols]
+            image[y_coord, x_coord, z_index] = row_values[z_index + num_xyz_cols]
 
     if not os.path.isdir(os.path.join(outdir_path, 'sli')):
         os.makedirs(os.path.join(outdir_path, 'sli'), mode=0o777)
