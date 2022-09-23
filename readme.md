@@ -30,7 +30,7 @@ Created for Jarvis Stobbs (Plant Imaging Lead) - jarvis.stobbs@lightsource.ca
 4. Activate the environment:
    1. Windows:
 
-           my_venv/Scripts/activate
+           my_venv\Scripts\activate
    2. Linux:
 
            source my_venv/bin/activate
